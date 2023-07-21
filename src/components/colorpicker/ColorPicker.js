@@ -116,8 +116,8 @@ const ColorPicker = () => {
         <input type='range' min={0} max={360} value={
           trigger === "box" ? currentboxh : currenth
           } onChange={(e) => slider1(e.target.value)} />
-        <input type='range' value={trigger === "box" ? Number(currentboxs.replace(/%/g, '')) : Number(currents.replace(/%/g, ''))} onChange={(e) => slider2(e.target.value + "%")} />
-        <input type='range' value={trigger === "box" ? Number(currentboxl.replace(/%/g, '')) : Number(currentl.replace(/%/g, ''))} onChange={(e) => slider3(e.target.value + "%")} />
+        <input type='range' value={trigger === "box" ? Number(currentboxs.slice(0,currentboxs.length-1)) : Number(currents.slice(0,currents.length-1))} onChange={(e) => slider2(e.target.value + "%")} />
+        <input type='range' value={trigger === "box" ? Number(currentboxl.slice(0,currentboxl.length-1)) : Number(currentl.slice(0,currentl.length-1 ))} onChange={(e) => slider3(e.target.value + "%")} />
       </div>
     </div>
   )
